@@ -36,21 +36,21 @@ export default function Navbar() {
               width={40}
               className="rounded-full"
             />
-            <span className="font-bold text-xl text-purple-600">CMA</span>
+            <span className="font-bold text-xl text-[#ac18bc]">CMA</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-1 hover:text-purple-600">
+            <Link href="/" className="flex items-center gap-1 hover:text-[#ac18bc]">
               <GoHomeFill /> Home
             </Link>
-            <Link href="/courses" className="flex items-center gap-1 hover:text-purple-600">
+            <Link href="/courses" className="flex items-center gap-1 hover:text-[#ac18bc]">
               <AiOutlineBook /> Courses
             </Link>
-            <Link href="/my-courses" className="flex items-center gap-1 hover:text-purple-600">
+            <Link href="/my-courses" className="flex items-center gap-1 hover:text-[#ac18bc]">
              <MdOutlineMenuBook /> My Courses
             </Link>
-            <Link href="/about" className="flex items-center gap-1 hover:text-purple-600">
+            <Link href="/about" className="flex items-center gap-1 hover:text-[#ac18bc]">
               <AiOutlineInfoCircle /> About
             </Link>
            
