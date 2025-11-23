@@ -9,7 +9,7 @@ import { AiOutlineBook, AiOutlineInfoCircle } from "react-icons/ai";
 import { IoLogIn, IoLogOut } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMenuBook } from "react-icons/md";
-import LogoImg from "../assests/logo.png"; // your logo
+import LogoImg from "../assets/logo.png"; // your logo
 
 export default function Navbar() {
   const { data: session } = useSession();

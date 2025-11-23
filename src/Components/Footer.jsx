@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
-import LogoImg from "../assests/logo.png";
+import LogoImg from "../assets/logo.png";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
