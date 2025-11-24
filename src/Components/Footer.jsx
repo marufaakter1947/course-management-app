@@ -99,7 +99,7 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="border-t border-[#fa7171] mt-8 pt-4 text-center text-sm">
-        <p>© {currentYear} Course Management. All Rights Reserved.</p>
+        <p>© {currentYear} Course Management App. All Rights Reserved.</p>
         <p className="mt-2">
           <Link href="/privacy" className="hover:text-teal-200 mr-3">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-teal-200">Terms of Service</Link>

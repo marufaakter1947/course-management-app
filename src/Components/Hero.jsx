@@ -37,7 +37,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-700 mb-8 max-w-xl"
+          className="text-lg md:text-xl  mb-8 max-w-xl font-medium "
         >
           Explore thousands of courses, track your progress, and advance your
           career with our easy-to-use Course Management platform.
