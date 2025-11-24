@@ -12,6 +12,7 @@ const CourseCard = ({ course }) => {
     student_capacity,
     enrollment_deadline,
     course_description,
+    course_price,
   } = course;
 
   return (
@@ -38,6 +39,9 @@ const CourseCard = ({ course }) => {
 
         <div className="text-xs flex justify-between items-center border-b border-gray-300 pb-1 font-semibold">
           Capacity: <span className="font-normal">{student_capacity}</span>
+        </div>
+        <div className="text-xs flex justify-between items-center border-b border-gray-300 pb-1 font-semibold">
+          Course Price: <span className="font-normal">${course_price}</span>
         </div>
 
         <div className="text-xs flex justify-between items-center border-b border-gray-300 pb-1 font-semibold">
