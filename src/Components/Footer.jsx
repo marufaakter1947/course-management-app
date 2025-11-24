@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="bg-linear-to-r from-[#ac18bc] to-[#b896bc] py-10 px-6 rounded-xl mt-20 text-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         
-        {/* Logo & Quick Links */}
+  
         <div className="flex flex-col items-center md:items-start">
           <div className="flex flex-col items-center md:items-start gap-2">
             <Image
@@ -57,7 +57,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact */}
+        
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-lg font-bold mb-4">Connect With Us</h3>
           <div className="flex gap-4 mb-3">
@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom */}
+    
       <div className="border-t border-[#fa7171] mt-8 pt-4 text-center text-sm">
         <p>© {currentYear} Course Management App. All Rights Reserved.</p>
         <p className="mt-2">

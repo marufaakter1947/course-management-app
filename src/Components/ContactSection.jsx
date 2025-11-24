@@ -28,7 +28,7 @@ export default function ContactSection() {
           Have questions or need help? Feel free to reach out to us anytime.
         </motion.p>
 
-        {/* Contact Form */}
+    
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow">
           <form className="grid grid-cols-1 gap-6">
 
@@ -70,7 +70,7 @@ export default function ContactSection() {
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
               type="submit"
-              className="bg-[#ac18bc] text-white py-3 rounded font-semibold hover:bg-[#9112a0] transition"
+              className="bg-linear-to-r from-[#ac18bc] to-[#b896bc] text-white py-3 rounded font-semibold hover:bg-[#9112a0] transition"
             >
               Send Message
             </motion.button>
