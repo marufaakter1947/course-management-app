@@ -49,7 +49,7 @@ export default function AddCoursePage() {
         enrollment_deadline: "",
         course_image: "",
       });
-      router.push("/my-courses");
+      router.push("/courses");
     } catch (err) {
       console.error(err);
       toast.error("Failed to add course");
