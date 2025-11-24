@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import CourseCard from "@/components/CourseCard"; // তোমার CourseCard path ঠিক মতো দিন
+import CourseCard from "@/components/CourseCard";
 
 export default function Page() {
   const { data: session, status } = useSession();
@@ -13,14 +13,12 @@ export default function Page() {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Redirect if not logged in
   useEffect(() => {
     if (status === "unauthenticated") {
       router.push("/login");
     }
   }, [status, router]);
 
-  // Fetch courses created by logged-in user
   useEffect(() => {
     if (!session) return;
     const fetchCourses = async () => {
@@ -48,7 +46,6 @@ export default function Page() {
       <h1 className="text-3xl font-bold text-[#ac18bc] mb-2 text-center">
         My Courses
       </h1>
-     
 
       {courses.length === 0 ? (
         <p className="text-center text-gray-500">
@@ -56,14 +53,14 @@ export default function Page() {
         </p>
       ) : (
         <div>
-         <p className="text-gray-500 text-center mb-10">
-  Here are all the courses i have created
-</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {courses.map((course) => (
-            <CourseCard key={course._id} course={course} />
-          ))}
-        </div>
+          <p className="text-gray-500 text-center mb-10">
+            Here are all the courses i have created
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {courses.map((course) => (
+              <CourseCard key={course._id} course={course} />
+            ))}
+          </div>
         </div>
       )}
     </div>

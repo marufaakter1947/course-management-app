@@ -1,3 +1,4 @@
+import FeaturesSection from "@/Components/FeaturesSection";
 import Hero from "@/Components/Hero";
 import PopularCourse from "@/Components/PopularCourse";
 
@@ -7,6 +8,7 @@ export default function Home() {
       <div className="flex-1">
         <Hero></Hero>
         <PopularCourse></PopularCourse>
+        <FeaturesSection></FeaturesSection>
       </div>
     </div>
   );
