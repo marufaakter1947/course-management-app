@@ -1,3 +1,4 @@
+import ContactSection from "@/Components/ContactSection";
 import FeaturesSection from "@/Components/FeaturesSection";
 import Hero from "@/Components/Hero";
 import PopularCourse from "@/Components/PopularCourse";
@@ -11,6 +12,7 @@ export default function Home() {
         <PopularCourse></PopularCourse>
         <FeaturesSection></FeaturesSection>
         <TestimonialsSection></TestimonialsSection>
+        <ContactSection></ContactSection>
       </div>
     </div>
   );
