@@ -1,26 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-const Link = ({ href, children, className }) => <a href={href} className={className}>{children}</a>;
+import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { CircleLoader } from "react-spinners";
-
-const useRouter = () => ({ push: (path) => console.log('Navigating to:', path) });
-const signIn = async (provider, options) => {
-  console.log(`Attempting sign in with: ${provider}`);
-  if (provider === "credentials") {
-    if (options.password === "fail") {
-      return { error: "Invalid credentials" };
-    }
-    return { error: null };
-  }
-  return { error: null };
-};
-const toast = {
-  error: (msg) => console.error("Toast Error:", msg),
-  success: (msg) => console.log("Toast Success:", msg),
-};
-
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function LoginPage() {
   const [loading, setLoading] = useState(false);
@@ -29,19 +15,17 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
-
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-
     const res = await signIn("credentials", {
+      redirect: false,
       email,
       password,
-      redirect: false,
     });
 
     if (res?.error) {
-      toast.error(res.error);
+      toast.error(res.error || "Invalid credentials");
       setLoading(false);
     } else {
       toast.success("Login successful!");
@@ -50,6 +34,7 @@ export default function LoginPage() {
   };
 
   const handleGoogleLogin = async () => {
+    setLoading(true);
     await signIn("google", { callbackUrl: "/" });
   };
 
@@ -129,7 +114,7 @@ export default function LoginPage() {
           <FcGoogle size={22} /> Continue with Google
         </button>
 
-        {/* Register Link */}
+        
         <p className="text-center text-sm mt-4 text-gray-600">
           Do not Have an account?{" "}
           <Link href="/register" className="font-semibold text-[#ac18bc] hover:text-[#ac18bc] transition duration-150 cursor-pointer">
@@ -141,3 +126,5 @@ export default function LoginPage() {
     </div>
   );
 }
+
+
