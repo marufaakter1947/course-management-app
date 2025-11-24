@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "axios": "^1.13.2",
     "framer-motion": "^12.23.24",
     "jsonwebtoken": "^9.0.2",
