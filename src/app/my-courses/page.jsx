@@ -45,19 +45,25 @@ export default function Page() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold text-[#ac18bc] mb-6 text-center">
+      <h1 className="text-3xl font-bold text-[#ac18bc] mb-2 text-center">
         My Courses
       </h1>
+     
 
       {courses.length === 0 ? (
         <p className="text-center text-gray-500">
           You have not created any courses yet.
         </p>
       ) : (
+        <div>
+         <p className="text-gray-500 text-center mb-10">
+  Here are all the courses i have created
+</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {courses.map((course) => (
             <CourseCard key={course._id} course={course} />
           ))}
+        </div>
         </div>
       )}
     </div>

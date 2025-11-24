@@ -20,14 +20,14 @@ export default function AboutPage() {
         {/* Image */}
         <div className="relative w-full md:w-1/2 h-64 md:h-96 rounded overflow-hidden shadow-lg">
           <Image
-            src="/about-hero.avif" // change to your image path
+            src="/about-hero.avif"
             alt="About CMA"
             fill
             className="object-cover"
           />
         </div>
 
-        {/* Text */}
+        
         <div className="md:w-1/2 space-y-4">
           <h2 className="text-2xl font-semibold text-[#ac18bc]">
             Our Mission
