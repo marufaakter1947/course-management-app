@@ -5,7 +5,8 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import CourseCard from "@/components/CourseCard";
+import CourseCard from "../../Components/CourseCard";
+// import CourseCard from "@/components/CourseCard";
 
 export default function Page() {
   const { data: session, status } = useSession();
