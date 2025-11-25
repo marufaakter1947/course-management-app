@@ -17,7 +17,7 @@ export default function AboutPage() {
       </p>
 
       <div className="flex flex-col md:flex-row items-center gap-10 mt-10">
-        {/* Image */}
+        
         <div className="relative w-full md:w-1/2 h-64 md:h-96 rounded overflow-hidden shadow-lg">
           <Image
             src="/about-hero.avif"

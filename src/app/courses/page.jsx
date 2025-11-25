@@ -34,9 +34,7 @@ const AllCourses = () => {
           Explore all available courses and enroll in the ones you like.
         </p>
       </div>
-
-     
-
+      
       <div className="flex justify-center">
         <div className="mb-6 flex justify-center relative w-full md:w-1/3">
   <input

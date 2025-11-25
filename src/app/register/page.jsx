@@ -78,18 +78,6 @@ export default function RegisterPage() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Image URL
-            </label>
-            <input
-              name="imageUrl"
-              type="text"
-              placeholder="Enter Your Image URL"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ac18bc]"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
               Email
             </label>
             <input
@@ -117,9 +105,9 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full py-2 text-lg font-semibold rounded-lg text-white ${
+            className={`w-full py-2 text-lg font-semibold rounded-lg text-white cursor-pointer ${
               loading
-                ? "bg-red-300 cursor-not-allowed"
+                ? "bg-[#b896bc] cursor-not-allowed"
                 : "bg-[#ac18bc] hover:bg-[#b896bc]"
             }`}
           >
@@ -130,7 +118,7 @@ export default function RegisterPage() {
         <button
           onClick={handleGoogleLogin}
           disabled={loading}
-          className="w-full py-2 mt-2 border border-gray-300 bg-white text-gray-700 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-50"
+          className="w-full py-2 mt-2 border border-gray-300 bg-white text-gray-700 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-50 cursor-pointer"
         >
           <FcGoogle size={22} /> Continue with Google
         </button>

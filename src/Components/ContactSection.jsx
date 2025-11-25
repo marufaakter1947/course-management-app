@@ -70,7 +70,7 @@ export default function ContactSection() {
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
               type="submit"
-              className="bg-linear-to-r from-[#ac18bc] to-[#b896bc] text-white py-3 rounded font-semibold hover:bg-[#9112a0] transition"
+              className="bg-linear-to-r from-[#ac18bc] to-[#b896bc] text-white py-3 rounded font-semibold hover:bg-[#9112a0] transition cursor-pointer"
             >
               Send Message
             </motion.button>
