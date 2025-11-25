@@ -25,7 +25,7 @@ export default function Page() {
     const fetchCourses = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/my-created-courses?email=${session.user.email}`
+          `https://course-management-app-server.vercel.app/my-created-courses?email=${session.user.email}`
         );
         setCourses(res.data);
       } catch (err) {
@@ -51,7 +51,9 @@ export default function Page() {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:5000/courses/${id}`);
+        await axios.delete(
+          `https://course-management-app-server.vercel.app/courses/${id}`
+        );
         setCourses(courses.filter((course) => course._id !== id));
         Swal.fire("Deleted!", "Course has been deleted.", "success");
         toast.success("Course deleted successfully");
@@ -118,7 +120,6 @@ export default function Page() {
             </table>
           </div>
 
-        
           <div className="md:hidden space-y-4">
             {courses.map((course) => (
               <div
@@ -128,7 +129,9 @@ export default function Page() {
                 <h2 className="text-lg font-semibold text-[#ac18bc]">
                   {course.course_name}
                 </h2>
-                <p className="text-sm text-gray-600">{course.student_capacity}</p>
+                <p className="text-sm text-gray-600">
+                  {course.student_capacity}
+                </p>
                 <p className="text-sm text-gray-600">{course.class_platform}</p>
                 <p className="text-sm text-gray-600">
                   Enrollment: {course.enrollment_deadline}

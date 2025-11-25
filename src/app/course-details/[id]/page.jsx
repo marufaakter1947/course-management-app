@@ -13,7 +13,9 @@ export default function Page() {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/courses/${id}`);
+        const response = await axios.get(
+          `https://course-management-app-server.vercel.app/courses/${id}`
+        );
         setCourse(response.data);
       } catch (err) {
         console.error(err);

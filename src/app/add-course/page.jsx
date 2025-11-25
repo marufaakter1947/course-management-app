@@ -34,11 +34,14 @@ export default function AddCoursePage() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/courses", {
-        ...formData,
-        instructor_name: session.user.name,
-        instructor_email: session.user.email,
-      });
+      const response = await axios.post(
+        "https://course-management-app-server.vercel.app/courses",
+        {
+          ...formData,
+          instructor_name: session.user.name,
+          instructor_email: session.user.email,
+        }
+      );
       toast.success("Course added successfully!");
       setFormData({
         course_name: "",

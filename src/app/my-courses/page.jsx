@@ -24,7 +24,7 @@ export default function Page() {
     const fetchCourses = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/my-created-courses?email=${session.user.email}`
+          `https://course-management-app-server.vercel.app/my-created-courses?email=${session.user.email}`
         );
         setCourses(res.data);
       } catch (err) {
