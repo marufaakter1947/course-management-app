@@ -132,7 +132,7 @@ export default function Navbar() {
                     <li>
                       <button
                         onClick={() => signOut({ callbackUrl: "/" })}
-                        className="w-full text-left px-4 py-2 hover:bg-gray-100 text-purple-600"
+                        className="w-full text-left px-4 py-2 hover:bg-gray-100 text-purple-600 cursor-pointer"
                       >
                         Logout
                       </button>
@@ -144,13 +144,13 @@ export default function Navbar() {
               <div className="hidden md:flex gap-2">
                 <Link
                   href="/login"
-                  className="bg-[#ac18bc] text-white px-3 py-1 rounded flex items-center gap-1"
+                  className="bg-[#ac18bc] text-white px-3 py-1 rounded flex items-center gap-1 cursor-pointer"
                 >
                   <IoLogIn /> Login
                 </Link>
                 <Link
                   href="/register"
-                  className="bg-[#ac18bc] text-white px-3 py-1 rounded flex items-center gap-1"
+                  className="bg-[#ac18bc] text-white px-3 py-1 rounded flex items-center gap-1 cursor-pointer"
                 >
                   <FaRegUser /> Register
                 </Link>
@@ -159,7 +159,7 @@ export default function Navbar() {
 
             {!user && (
               <button
-                className="md:hidden text-2xl"
+                className="md:hidden text-2xl cursor-pointer"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
