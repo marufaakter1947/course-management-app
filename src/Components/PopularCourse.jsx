@@ -2,8 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CourseCard from "../Components/CourseCard";
+// import CourseCard from "../Components/CourseCard";
 import Link from "next/link";
+import CourseCard from "./CourseCard";
 
 export default function PopularCourse() {
   const [popularCourses, setPopularCourses] = useState([]);
