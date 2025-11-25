@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Name: Course Management App
 
-## Getting Started
+Project Description:
+Course Management App is a responsive web application that allows instructors to create, manage, and showcase courses, and students to browse and enroll. It includes authentication, protected pages, dynamic course cards, and a user-friendly interface.
 
-First, run the development server:
+Key Features:
 
-```bash
+User authentication (login/register) with protected routes
+
+Instructor dashboard: Add, manage, and delete courses
+
+Popular courses section on the homepage, sorted by capacity
+
+Student enrollment system
+
+Fully responsive UI for all devices
+
+Smooth animations using Framer Motion and interactive UI components
+
+Setup & Installation
+1. Clone the Repository of client side
+git clone https://github.com/marufaakter1947/course-management-app
+cd course-management-app
+
+and for server side
+git clone https://github.com/marufaakter1947/course-management-app-server
+cd course-management-app-server
+
+2. Install Dependencies
+npm install
+
+3. Environment Variables
+
+Create a .env.local file in the root directory:
+
+NEXTAUTH_SECRET=oGZo4tIJ/9JKsxUMVTXhzbp5DqPXbwN7+gogxDinaYg=
+NEXTAUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=1022279330932-ekku8gd8vcb1dp69hilmseiat72nsnr1.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+
+NEXT_PUBLIC_API_BASE=http://localhost:5000
+
+
+
+
+4. Run the Application
+# For backend
+nodemon index.js
+
+# For Next.js frontend
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Routes Summary
+Authentication
+Route	Method	Description
+/auth/register	POST	Register a new user
+/auth/login	POST	Login user
+Courses
+Route	Method	Description
+/courses	GET	Get all courses
+/courses/:id	GET	Get a course by ID
+/courses	POST	Create a new course
+/courses/:id	DELETE	Delete a course
+/popular-courses	GET	Get top 6 popular courses
+/my-courses	GET	Get all courses created by logged-in instructor
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Frontend: Next.js, React, Tailwind CSS, Framer Motion
 
-## Learn More
+Backend: Node.js, Express.js
 
-To learn more about Next.js, take a look at the following resources:
+Database: MongoDB
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Authentication: NextAuth.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Others: Axios, react-hot-toast, SweetAlert2
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
