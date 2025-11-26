@@ -20,14 +20,14 @@ export default function RegisterPage() {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const imageUrl = e.target.imageUrl.value;
+    // const imageUrl = e.target.imageUrl.value;
 
     try {
       await axios.post(`${process.env.NEXT_PUBLIC_API_BASE}/auth/register`, {
         name,
         email,
         password,
-        image: imageUrl,
+        // image: imageUrl,
       });
 
       toast.success("Registration complete!");
