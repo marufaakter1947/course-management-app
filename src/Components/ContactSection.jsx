@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ContactSection() {
   return (
-    <section className="py-20 bg-[#f4e6f7]">
+    <section className="py-20 bg-[#f4e6f7] mx-4 rounded">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Heading */}

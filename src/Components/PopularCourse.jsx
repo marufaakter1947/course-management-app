@@ -30,7 +30,7 @@ export default function PopularCourse() {
 
   return (
     <div>
-      <section className="px-4 max-w-7xl mx-auto md:px-10 py-10 bg-gray-50">
+      <section className="mx-4 py-10 ">
         <h2 className="text-3xl font-bold text-[#ac18bc] mb-2.5 text-center">
           Popular Courses
         </h2>

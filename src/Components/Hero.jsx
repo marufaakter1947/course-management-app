@@ -7,14 +7,14 @@ import HeroBg from "../assets/Hero-bg.png";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gray-100 max-w-7xl mx-auto px-4 min-h-[70vh]">
+    <section className="relative bg-gray-100 mt-2  min-h-[70vh] mx-4">
       <div className="absolute inset-0">
         <Image
           src={HeroBg}
           alt="Hero Background"
           fill
           style={{ objectFit: "cover" }}
-          className="opacity-30"
+          className="opacity-30 rounded"
         />
       </div>
 

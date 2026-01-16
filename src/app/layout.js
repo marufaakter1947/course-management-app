@@ -24,9 +24,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          <NavbarClient /> 
-          {children}
-          <Footer />
+           {/* <div className="max-w-7xl mx-auto px-4"> */}
+            <NavbarClient />
+            {children}
+            <Footer />
+          {/* </div> */}
         </Providers>
       </body>
     </html>
