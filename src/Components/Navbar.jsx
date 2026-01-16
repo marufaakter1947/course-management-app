@@ -59,8 +59,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Logo"
-              width={40}
-              height={40}
+              width={42}
+              height={42}
               className="rounded-full"
             />
             <span className="font-bold text-xl text-[#ac18bc]">CMA</span>

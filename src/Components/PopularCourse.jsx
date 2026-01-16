@@ -30,7 +30,7 @@ export default function PopularCourse() {
 
   return (
     <div>
-      <section className="px-4 md:px-10 py-10 bg-gray-50">
+      <section className="px-4 max-w-7xl mx-auto md:px-10 py-10 bg-gray-50">
         <h2 className="text-3xl font-bold text-[#ac18bc] mb-2.5 text-center">
           Popular Courses
         </h2>
@@ -38,7 +38,7 @@ export default function PopularCourse() {
           Check out our top courses with the highest student enrollment
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {popularCourses.length > 0 ? (
             popularCourses.map((course) => (
               <CourseCard key={course._id} course={course} />

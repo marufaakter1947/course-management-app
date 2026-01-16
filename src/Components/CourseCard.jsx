@@ -26,16 +26,16 @@ const CourseCard = ({ course }) => {
         />
       </figure>
 
-      <div className="card-body p-4 rounded space-y-4">
+      <div className="card-body p-4 rounded space-y-2">
         <div className="overflow-hidden">
           <h2 className="card-title text-[#ac18bc] line-clamp-1 group-hover:line-clamp-none transition-all duration-300">
             {course_name}
           </h2>
         </div>
 
-        <p className="text-sm text-gray-700 line-clamp-2">
+        {/* <p className="text-sm text-gray-700 line-clamp-2">
           {course_description}
-        </p>
+        </p> */}
 
         <div className="text-xs flex justify-between items-center border-b border-gray-300 pb-1 font-semibold">
           Capacity: <span className="font-normal">{student_capacity}</span>
@@ -44,12 +44,12 @@ const CourseCard = ({ course }) => {
           Course Price: <span className="font-normal">${course_price}</span>
         </div>
 
-        <div className="text-xs flex justify-between items-center border-b border-gray-300 pb-1 font-semibold">
+        {/* <div className="text-xs flex justify-between items-center border-b border-gray-300 pb-1 font-semibold">
           Enrollment Deadline:{" "}
           <span className="text-[#BC1823] font-medium">
             {enrollment_deadline}
           </span>
-        </div>
+        </div> */}
 
         <Link
           href={`/course-details/${_id}`}

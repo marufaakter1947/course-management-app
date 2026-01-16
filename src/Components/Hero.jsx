@@ -7,7 +7,7 @@ import HeroBg from "../assets/Hero-bg.png";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gray-100">
+    <section className="relative bg-gray-100 max-w-7xl mx-auto px-4 min-h-[70vh]">
       <div className="absolute inset-0">
         <Image
           src={HeroBg}
@@ -18,7 +18,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-32 flex flex-col items-center text-center">
+      <div className="relative max-w-7xl mx-auto px-6 pt-12 flex flex-col items-center text-center">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: [0, -20, 0] }}
