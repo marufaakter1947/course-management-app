@@ -12,8 +12,6 @@ const Footer = () => {
   return (
     <footer className="bg-linear-to-r from-[#ac18bc] to-[#b896bc] py-10  px-4 mt-20 text-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        
-  
         <div className="flex flex-col items-center md:items-start">
           <div className="flex flex-col items-center md:items-start gap-2">
             <Image
@@ -27,37 +25,49 @@ const Footer = () => {
           </div>
           <ul className="space-y-2 mt-4">
             <li>
-              <Link href="/" className="hover:text-teal-200">Home</Link>
+              <Link href="/" className="hover:text-teal-200">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/courses" className="hover:text-teal-200">Courses</Link>
+              <Link href="/courses" className="hover:text-teal-200">
+                Courses
+              </Link>
             </li>
             <li>
-              <Link href="/login" className="hover:text-teal-200">Login</Link>
+              <Link href="/about" className="hover:text-teal-200">
+                About
+              </Link>
             </li>
           </ul>
         </div>
 
-        {/* Community */}
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-lg font-bold mb-4">Community</h3>
           <ul className="space-y-2">
             <li>
-              <Link href="/forums" className="hover:text-teal-200">Discussion Forums</Link>
+              <Link href="/#features" className="hover:text-teal-200">
+                Our Features
+              </Link>
             </li>
             <li>
-              <Link href="/events" className="hover:text-teal-200">Events & Workshops</Link>
+              <Link href="/#testimonials" className="hover:text-teal-200">
+                Testimonials
+              </Link>
             </li>
             <li>
-              <Link href="/leaderboard" className="hover:text-teal-200">Leaderboard</Link>
+              <Link href="/#faq" className="hover:text-teal-200">
+                FAQ
+              </Link>
             </li>
             <li>
-              <Link href="/resources" className="hover:text-teal-200">Resources</Link>
+              <Link href="/#contact" className="hover:text-teal-200">
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>
 
-        
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-lg font-bold mb-4">Connect With Us</h3>
           <div className="flex gap-4 mb-3">
@@ -97,12 +107,15 @@ const Footer = () => {
         </div>
       </div>
 
-    
       <div className="border-t border-[#fa7171] mt-8 pt-4 text-center text-sm">
         <p>© {currentYear} Course Management App. All Rights Reserved.</p>
         <p className="mt-2">
-          <Link href="/privacy" className="hover:text-teal-200 mr-3">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-teal-200">Terms of Service</Link>
+          <Link href="/privacy" className="hover:text-teal-200 mr-3">
+            Privacy Policy
+          </Link>
+          <Link href="/terms" className="hover:text-teal-200">
+            Terms of Service
+          </Link>
         </p>
       </div>
     </footer>

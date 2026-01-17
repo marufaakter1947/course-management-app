@@ -2,7 +2,7 @@
 
 export default function TestimonialsSection() {
   return (
-    <section
+    <section id="testimonials"
       className="py-20 bg-cover bg-center bg-no-repeat relative mx-4 rounded overflow-hidden mb-10"
       style={{ backgroundImage: "url('/testimonial_img.jpg')" }}
     >

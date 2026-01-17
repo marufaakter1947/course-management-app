@@ -30,7 +30,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-5 bg-gray-200 mx-4 rounded-2xl mb-12">
+    <section id="faq" className="py-5 bg-gray-200 mx-4 rounded-2xl mb-12">
       <div className="max-w-4xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

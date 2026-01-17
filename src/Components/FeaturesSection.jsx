@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function FeaturesSection() {
   return (
-    <section className="py-10 mb-10 bg-[#e3bde8] mx-4 rounded">
+    <section id="features" className="py-10 mb-10 bg-[#e3bde8] mx-4 rounded">
       <div className=" px-4">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

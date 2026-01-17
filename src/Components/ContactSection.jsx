@@ -20,7 +20,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-5 bg-[#f4e6f7] mx-4 rounded">
+    <section id="contact" className="py-5 bg-[#f4e6f7] mx-4 rounded">
       <div className="max-w-6xl mx-auto px-4">
 
         <motion.h2
