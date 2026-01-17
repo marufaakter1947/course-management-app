@@ -1,13 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
 export default function ContactSection() {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // fake API delay
+    setTimeout(() => {
+      setLoading(false);
+      toast.success("Message sent successfully!");
+      e.target.reset();
+    }, 1500);
+  };
+
   return (
-    <section className="py-20 bg-[#f4e6f7] mx-4 rounded">
+    <section className="py-5 bg-[#f4e6f7] mx-4 rounded">
       <div className="max-w-6xl mx-auto px-4">
-        
-        {/* Heading */}
+
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,52 +43,40 @@ export default function ContactSection() {
           Have questions or need help? Feel free to reach out to us anytime.
         </motion.p>
 
-    
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow">
-          <form className="grid grid-cols-1 gap-6">
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
 
             <motion.input
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              required
               type="text"
               placeholder="Your Name"
               className="border border-gray-300 rounded px-4 py-3 w-full focus:border-[#ac18bc] outline-none"
             />
 
             <motion.input
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              required
               type="email"
               placeholder="Your Email"
               className="border border-gray-300 rounded px-4 py-3 w-full focus:border-[#ac18bc] outline-none"
             />
 
             <motion.textarea
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              required
               rows="5"
               placeholder="Your Message"
               className="border border-gray-300 rounded px-4 py-3 w-full focus:border-[#ac18bc] outline-none"
             />
 
             <motion.button
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              viewport={{ once: true }}
               type="submit"
-              className="bg-linear-to-r from-[#ac18bc] to-[#b896bc] text-white py-3 rounded font-semibold hover:bg-[#9112a0] transition cursor-pointer"
+              disabled={loading}
+              className="bg-linear-to-r from-[#ac18bc] to-[#b896bc] text-white py-3 rounded font-semibold transition cursor-pointer disabled:opacity-60"
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </motion.button>
+
           </form>
         </div>
       </div>
