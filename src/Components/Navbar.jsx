@@ -1,5 +1,5 @@
 "use client";
-
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -14,12 +14,21 @@ import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 export default function Navbar() {
   const { data: session } = useSession();
   const user = session?.user;
+  const pathname = usePathname();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const menuRef = useRef();
   const profileRef = useRef();
+
+  const linkClass = (path) =>
+    `flex items-center gap-1 hover:text-[#ac18bc] ${
+      pathname === path ? "text-[#ac18bc] font-semibold" : ""
+    }`;
+
+  const mobileLinkClass = (path) =>
+    `block ${pathname === path ? "text-[#ac18bc] font-semibold" : ""}`;
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -67,28 +76,17 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
-            <Link
-              href="/"
-              className="flex items-center gap-1 hover:text-[#ac18bc]"
-            >
+            <Link href="/" className={linkClass("/")}>
               <GoHomeFill /> Home
             </Link>
-            <Link
-              href="/courses"
-              className="flex items-center gap-1 hover:text-[#ac18bc]"
-            >
+            <Link href="/courses" className={linkClass("/courses")}>
               <AiOutlineBook /> Courses
             </Link>
-            <Link
-              href="/my-courses"
-              className="flex items-center gap-1 hover:text-[#ac18bc]"
-            >
+            <Link href="/my-courses" className={linkClass("/my-courses")}>
               <MdOutlineMenuBook /> My Courses
             </Link>
-            <Link
-              href="/about"
-              className="flex items-center gap-1 hover:text-[#ac18bc]"
-            >
+
+            <Link href="/about" className={linkClass("/about")}>
               <AiOutlineInfoCircle /> About
             </Link>
           </div>
@@ -176,7 +174,7 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            className="block"
+            className={mobileLinkClass("/")}
             onClick={() => setMobileMenuOpen(false)}
           >
             <GoHomeFill className="inline" /> Home
@@ -184,7 +182,7 @@ export default function Navbar() {
 
           <Link
             href="/courses"
-            className="block"
+            className={mobileLinkClass("/courses")}
             onClick={() => setMobileMenuOpen(false)}
           >
             <AiOutlineBook className="inline" /> Courses
@@ -192,7 +190,7 @@ export default function Navbar() {
 
           <Link
             href="/my-courses"
-            className="block"
+            className={mobileLinkClass("/my-courses")}
             onClick={() => setMobileMenuOpen(false)}
           >
             <MdOutlineMenuBook className="inline" /> My Courses
@@ -200,7 +198,7 @@ export default function Navbar() {
 
           <Link
             href="/about"
-            className="block"
+            className={mobileLinkClass("/about")}
             onClick={() => setMobileMenuOpen(false)}
           >
             <AiOutlineInfoCircle className="inline" /> About
